@@ -1,0 +1,603 @@
+@font-face {
+  font-family: "Roobert";
+  src: url("https://twitchmedia.s3-us-west-2.amazonaws.com/Roobert/OTF/RoobertTW-Regular.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("https://twitchmedia.s3-us-west-2.amazonaws.com/Roobert/OTF/RoobertTW-Light.otf");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Roobert";
+  src: url("https://twitchmedia.s3-us-west-2.amazonaws.com/Roobert/OTF/RoobertTW-SemiBold.otf");
+  font-weight: bold;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* prevent side scrolling on mobile */
+  touch-action: manipulation; /* prevent double tap to zoom on mobile */
+}
+
+body {
+  margin: 0;
+  font-family: "Roobert";
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+/* top navigation bar styling */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  height: 130px;
+  box-sizing: border-box;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin-left: 30px;
+  color: #9146ff;
+}
+
+.nav-link:hover {
+  text-decoration: solid underline 1px #9146ff;
+  transition: ease-in 1s;
+}
+
+.menu-button {
+  width: 30px;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-logo {
+  height: 30px;
+  width: auto;
+}
+
+/* Hidden side menu */
+.side-menu-position {
+  margin-top: 130px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5000;
+}
+
+.side-menu-design {
+  background-color: white;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.side-menu-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 50px;
+}
+.side-menu-link {
+  text-decoration: none;
+  color: #9146ff;
+  font-size: 3rem;
+  line-height: 4rem;
+  transition: 0.3s ease-in;
+}
+
+.side-menu-link:hover {
+  color: black;
+  text-decoration: underline 2px solid black
+}
+
+.show-menu {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.overview {
+  position: relative;
+  height: 1200px;
+}
+
+.overview > h1 {
+  padding-left: 50px;
+}
+
+
+
+.squares-wrapper {
+  position: relative;
+  height: 900px;
+}
+
+.purple-square-1 {
+  background-color: #9146ff;
+  color: white;
+  height: 520px;
+  width: 55%;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  position: absolute;
+  right: 0;
+}
+
+.first-square-text {
+  width: 70%;
+  font-weight: lighter;
+}
+
+.pink-square {
+  background-color: #fab5ff;
+  height: 500px;
+  width: 50%;
+  display: flex;
+  padding: 5%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  background-image: url("https://twitchmedia.s3-us-west-2.amazonaws.com/Wendys+Streamable+End+Card.png");
+  background-size: contain;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-position: center left 30%;
+}
+
+.first-audience-photo {
+  background-image: url("https://twitchmedia.s3-us-west-2.amazonaws.com/twitchcon_stock_photo_audience.jpg");
+  height: 500px;
+  width: 47%;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.purple-square-2 {
+  background-color: #9146ff;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1000;
+}
+
+.benefits-overview {
+  background-color: #9146ff;
+  padding: 50px 50px 200px 50px;
+  margin-top: -110px;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits-overview > h1 {
+  color: white;
+}
+
+.benefits-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+
+
+.benefit-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0ff;
+  height: 250px;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.benefit-headline {
+  margin: 0;
+}
+
+.benefit-text {
+  font-weight: lighter;
+}
+
+/* begin carousel section */
+.user-flow-explanation {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-flow-headline {
+  margin-bottom: 20px;
+  width: 40%;
+}
+
+.carousel-image-box > img {
+  width: 300px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.carousel-container {
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-nav {
+  cursor: pointer;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.3s ease;
+  border-radius: 5px;
+  user-select: none;
+}
+
+.carousel-nav:hover {
+  background-color: rgb(191, 171, 255);
+  color: white;
+  cursor: pointer;
+}
+
+/* end carousel section */
+
+.features-overview {
+  background-color: #9146ff;
+  padding: 50px;
+  color: white;
+}
+
+.features-headline {
+  text-align: center;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature-square {
+  padding: 0 75px;
+}
+
+.feature-list {
+  font-size: 1.5rem;
+}
+
+.sample-report-container {
+  padding-top: 40px;
+}
+
+.sample-report-container  > h2 {
+  text-align: center;
+}
+
+.reporting-metrics {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.metrics {
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  line-height: 0;
+  color: transparent;
+}
+
+.show-metrics {
+  line-height: 1.5;
+  color: white;
+  padding-bottom: 100px;
+}
+
+.toggle-report:hover {
+  cursor: pointer;
+  color: black;
+  transition: 0.5s ease;
+}
+
+.get-in-touch {
+  background-color: black;
+  margin-top: -100px;
+  padding: 100px 50px;
+}
+
+.cta {
+  color: white;
+  max-width: 80%;
+  font-weight: normal;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #9146ff;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.contact-link::after {
+  content: "↗";
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+/* footer section */
+footer {
+  color: white;
+  background-color: black;
+  padding: 50px;
+  line-height: 1;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer > img {
+  height: 30px;
+}
+
+.footer-item {
+  padding-right: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer-item:hover {
+  text-decoration: underline;
+}
+
+.made-with-love {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.made-with-love > img {
+  height: 15px;
+  padding: 5px;
+}
+
+/* styling modifications for small screens */
+@media (max-width: 800px) {
+  body,html {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }  
+  li {
+    font-size: 1rem;
+  }
+  a.contact-link {
+    font-size: 2rem;
+  }
+  nav {
+    padding: 25px;
+    height: 100px;
+    box-sizing: border-box;
+  }
+   .nav-list {
+    display: none;
+  } 
+  .nav-logo {
+    display: none;
+  }
+  .purple-square-1 {
+    height: 250px;
+    width: 85%;
+  }
+  .first-square-text {
+    width: 80%;
+  }
+  .pink-square {
+    max-height: 450px;
+    width: 100%;
+    top: 180px;
+    padding: 100px 0;
+    background-position: center;
+  }    
+  .first-audience-photo {
+    background-image: url("https://twitchmedia.s3-us-west-2.amazonaws.com/twitchcon_stock_photo_audience.jpg");
+    height: 250px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top -50px;
+    position: absolute;
+    bottom: -100px;
+  }
+  .benefits-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+  .benefits-overview {
+    padding-bottom: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .benefits-headline {
+    text-align: center;
+  }
+  .benefit-detail{
+    padding: 0 50px; 
+  }
+  .user-flow-explanation {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .user-flow-headline {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .carousel-container {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-nav {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+  .features-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-square {
+    padding: 0;
+  }
+  .cta {
+    font-size: 2rem;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .made-with-love {
+    padding-top: 30px;
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-item {
+    padding: 3px;
+  }
+}
+
+/* small/medium sized screens */
+@media (min-width: 801px) and (max-width: 1049px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  li {
+    font-size: 1.3rem;
+  } 
+  .nav-list {
+    display: none;
+  }  
+  .nav-logo {
+    display: none;
+  }
+  .benefits-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 15px;
+  }
+  .benefits-headline {
+    text-align: center;
+  }
+  .benefits-overview {
+    margin-top: -150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .user-flow-headline {
+    font-size: 3.5rem;
+  }
+  .feature-square {
+    padding: 25px;
+  }
+}
+
+/* styling modifications for medium screens */
+@media (min-width: 1050px) and (max-width: 1440px) {
+ .benefits-overview {
+    margin-top: -150px;
+  }
+  .menu-button {
+    display: none;
+  }
+  .user-flow-headline {
+    font-size: 4rem;
+  }
+}
+
+/* styling modifications for large screens */
+@media (min-width: 1441px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .menu-button {
+    display: none;
+  }
+}
