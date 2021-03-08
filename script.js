@@ -10,19 +10,17 @@ function menuHandler(event) {
   
 }
 
-function showMenu() {
   const sideMenu = document.getElementById("side-menu");
   const hamburger = document.getElementById("hamburger");
   const closeButton = document.getElementById("close-button");
+
+function showMenu() {
   hamburger.style.display = "none";
   closeButton.style.display = "block";
   sideMenu.classList.add("show-menu");
 }
 
 function hideMenu() {
-  const sideMenu = document.getElementById("side-menu");
-  const hamburger = document.getElementById("hamburger");
-  const closeButton = document.getElementById("close-button");
   hamburger.style.display = "block";
   closeButton.style.display = "none";
   sideMenu.classList.remove("show-menu");
